@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+  tensorflow:
+    build:
+      context: ./tensorflow
+    image: tensorflow/test_serving
+    command: --model_config_file=/config/config.conf
+    container_name: tfserving_resnetls 
+    ports:
+      - "8501:8501"
+    environment:
+      - MODEL_NAME=resnet
+    
+   

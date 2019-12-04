@@ -1,0 +1,7 @@
+FROM emacski/tensorflow-serving:1.14.0-linux_arm_armv7-a_neon_vfpv3
+COPY . ./
+COPY ./tmp/resnet /models/resnet
+
+COPY ./config.conf /config/config.conf
+
+ENV MODEL_CONFIG_FILE=/config/config.conf
