@@ -1,6 +1,6 @@
 version: '2.0'
 services:
-  tensorflow:
+  deep-learning:
     build:
       context: ./tensorflow
     image: tensorflow/test_mobilenet
