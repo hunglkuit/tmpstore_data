@@ -1,4 +1,4 @@
-FROM emacski/tensorflow-serving:1.14.0-linux_arm_armv7-a_neon_vfpv3
+FROM tensorflow/serving
 COPY . ./
 COPY ./tmp/mobilenet_v2_100_224 /models/mobilenet_v2_100_224
 

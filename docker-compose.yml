@@ -3,7 +3,7 @@ services:
   tensorflow:
     build:
       context: ./tensorflow
-    image: tensorflow/test_serving
+    image: tensorflow/test_mobilenet
     command: --model_config_file=/config/config.conf
     container_name: tfserving_mobilenet_v2_100_224
     ports:
