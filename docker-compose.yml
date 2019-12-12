@@ -5,10 +5,8 @@ services:
       context: ./tensorflow
     image: tensorflow/test_serving
     command: --model_config_file=/config/config.conf
-    container_name: tfserving_resnetls 
+    container_name: tfserving_mobilenet_v2_100_224
     ports:
       - "8501:8501"
     environment:
-      - MODEL_NAME=resnet
-    
-   
+      - MODEL_NAME=mobilenet_v2_100_224
