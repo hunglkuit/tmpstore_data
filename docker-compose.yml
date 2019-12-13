@@ -3,12 +3,12 @@ services:
   tensorflow:
     build:
       context: ./tensorflow
-    image: tensorflow/test_{{model-name}}
+    image: tensorflow/test_resnet
     command: --model_config_file=/config/config.conf
-    container_name: tfserving_{{model-name}}
+    container_name: tfserving_resnet
     ports:
       - "8501:8501"
     environment:
-      - MODEL_NAME={{model-name}}
+      - MODEL_NAME=resnet
     
    
